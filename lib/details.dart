@@ -42,9 +42,6 @@ class DetailsState extends ConsumerState<Details> {
 
 	//===================================================
 	Future<void> mapCreated( MapboxMap controller ) async {
-		mapController = controller;
-		// markerMgr = await controller.annotations.createPointAnnotationManager();
-
 		controller.location.updateSettings(
 			LocationComponentSettings(
 				enabled: false
@@ -52,6 +49,8 @@ class DetailsState extends ConsumerState<Details> {
 				, puckBearingEnabled: true
 			)
 		);
+
+		mapController = controller;
 	}
 
 	// ==================================================
@@ -75,8 +74,9 @@ class DetailsState extends ConsumerState<Details> {
 					, crossAxisAlignment: CrossAxisAlignment.center
 					, spacing: 20
 					, children: <Widget>[
-						TextButton(
+						ElevatedButton(
 							onPressed: () => goHome( context )
+							, style: ElevatedButton.styleFrom( backgroundColor: Colors.blue, foregroundColor: Colors.white)
 							, child: const Text('return')
 						)
 						, Expanded(
