@@ -18,7 +18,7 @@ dependencies:
   isar_community: ^3.3.0-dev.3
   isar_community_flutter_libs: ^3.3.0-dev.3
   page_route_animator: ^1.0.4
-  mapbox_maps_flutter: ^2.12.0-rc.2
+  mapbox_maps_flutter: ^2.12.0
 
 dev_dependencies:
   flutter_test:
